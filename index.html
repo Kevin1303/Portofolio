@@ -55,12 +55,13 @@
           <p class="mt-4 text-gray-700 whitespace-pre-line">
                 Saya adalah mahasiswa Computer Science dengan spesialisasi Software Engineering yang memiliki minat besar dalam pengembangan perangkat lunak dan pemecahan masalah melalui teknologi.
 
-                Saya terbiasa menggunakan bahasa pemrograman seperti C, C++, Java, dan Python, serta memiliki pengalaman dalam membangun aplikasi web menggunakan HTML, CSS, JavaScript, dan framework modern.
+                Terbiasa menggunakan bahasa pemrograman seperti C, C++, Java, dan Python, serta memiliki pengalaman dalam membangun aplikasi web menggunakan HTML, CSS, JavaScript, dan framework modern.
 
-                Selama kuliah, saya aktif mengerjakan berbagai proyek akademik seperti sistem manajemen data, aplikasi berbasis web, dan implementasi algoritma.
-                Saya memiliki kemampuan kerja sama dalam tim, komunikasi yang baik, serta ketelitian dalam menulis kode yang rapi dan terstruktur.
+                Terbiasa menggunakan bahasa pemrograman seperti C, C++, Java, dan Python, serta berpengalaman membangun aplikasi web menggunakan HTML, CSS, JavaScript, dan berbagai framework modern.
 
-                Saya sedang mencari kesempatan magang di bidang software engineering untuk mengasah keterampilan teknis, berkontribusi pada proyek nyata, dan belajar dari lingkungan kerja profesional.
+                Aktif mengerjakan proyek akademik meliputi sistem manajemen data, aplikasi berbasis web, hingga implementasi algoritma. Memiliki kemampuan bekerja sama dalam tim, komunikasi yang baik, serta ketelitian dalam menulis kode yang rapi dan terstruktur.
+
+                Saat ini sedang mencari kesempatan magang di bidang software engineering untuk mengasah keterampilan teknis, berkontribusi pada proyek nyata, dan belajar dari lingkungan kerja profesional.
           </p>
         </div>
         <aside class="bg-white rounded-xl p-6 shadow-sm">
@@ -109,68 +110,153 @@
     </section>
 
 <!-- Skills Section -->
+<!-- Skills Section -->
 <section id="skills" class="mt-16">
   <h2 class="text-2xl font-semibold text-center">Skills & Tools</h2>
 
-  <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-    <!-- Skill Card -->
+  <!-- Tab Buttons -->
+  <div class="flex justify-center gap-4 mt-6">
+    <button class="tab-btn active px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium" data-tab="skills-tab">Skills</button>
+    <button class="tab-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-800 text-sm font-medium" data-tab="tools-tab">Tools</button>
+  </div>
+
+  <!-- Skills Grid -->
+  <div id="skills-tab" class="tab-content active mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-10 h-10" alt="C++"/>
       <span class="mt-2 text-sm">C++</span>
     </div>
-
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" class="w-10 h-10" alt="C#"/>
+      <span class="mt-2 text-sm">C#</span>
+    </div>
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-10 h-10" alt="Java"/>
       <span class="mt-2 text-sm">Java</span>
     </div>
-
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-10 h-10" alt="Python"/>
       <span class="mt-2 text-sm">Python</span>
     </div>
-
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" class="w-10 h-10" alt="R"/>
+      <span class="mt-2 text-sm">R</span>
+    </div>
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-10 h-10" alt="HTML5"/>
       <span class="mt-2 text-sm">HTML5</span>
     </div>
-
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-10 h-10" alt="CSS3"/>
       <span class="mt-2 text-sm">CSS3</span>
     </div>
-
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-10 h-10" alt="JavaScript"/>
       <span class="mt-2 text-sm">JavaScript</span>
     </div>
-
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-10 h-10" alt="React"/>
       <span class="mt-2 text-sm">React</span>
     </div>
-
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-10 h-10" alt="MySQL"/>
-      <span class="mt-2 text-sm">MySQL</span>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" class="w-10 h-10" alt="Dart"/>
+      <span class="mt-2 text-sm">Dart</span>
     </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" class="w-10 h-10" alt="Go"/>
+      <span class="mt-2 text-sm">Go</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" class="w-10 h-10" alt="GraphQL"/>
+      <span class="mt-2 text-sm">GraphQL</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-10 h-10" alt="PHP"/>
+      <span class="mt-2 text-sm">PHP</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="w-10 h-10" alt="TypeScript"/>
+      <span class="mt-2 text-sm">TypeScript</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-10 h-10" alt="Firebase"/>
+      <span class="mt-2 text-sm">Firebase</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" class="w-10 h-10" alt=".NET"/>
+      <span class="mt-2 text-sm">.NET</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="w-10 h-10" alt="Bootstrap"/>
+      <span class="mt-2 text-sm">Bootstrap</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" class="w-10 h-10" alt="Django"/>
+      <span class="mt-2 text-sm">Django</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-10 h-10" alt="Flutter"/>
+      <span class="mt-2 text-sm">Flutter</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10" alt="NodeJS"/>
+      <span class="mt-2 text-sm">NodeJS</span>
+    </div>
+  </div>
 
+  <!-- Tools Grid -->
+  <div id="tools-tab" class="tab-content hidden mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="w-10 h-10" alt="Azure"/>
+      <span class="mt-2 text-sm">Azure</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" class="w-10 h-10" alt="Netlify"/>
+      <span class="mt-2 text-sm">Netlify</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-10 h-10" alt="GitHub Pages"/>
+      <span class="mt-2 text-sm">GitHub Pages</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://seeklogo.com/images/E/expo-logo-01BB2BCFC3-seeklogo.com.png" class="w-10 h-10" alt="Expo"/>
+      <span class="mt-2 text-sm">Expo</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="w-10 h-10" alt="Docker"/>
+      <span class="mt-2 text-sm">Docker</span>
+    </div>
+    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="w-10 h-10" alt="VSCode"/>
+      <span class="mt-2 text-sm">VSCode</span>
+    </div>
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-10 h-10" alt="Git"/>
       <span class="mt-2 text-sm">Git</span>
     </div>
-
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-10 h-10" alt="Figma"/>
       <span class="mt-2 text-sm">Figma</span>
     </div>
-    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" class="w-10 h-10" alt="C#"/>
-    <span class="mt-2 text-sm">C#</span>
-</div>
-
-
   </div>
 </section>
+
+<!-- Tab Script -->
+<script>
+  const tabBtns = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      tabBtns.forEach(b => b.classList.remove("bg-indigo-600", "text-white", "active"));
+      btn.classList.add("bg-indigo-600", "text-white", "active");
+
+      tabContents.forEach(c => c.classList.add("hidden"));
+      document.getElementById(btn.dataset.tab).classList.remove("hidden");
+    });
+  });
+</script>
+
     
     <!-- Contact -->
     <section id="contact" class="mt-16">
