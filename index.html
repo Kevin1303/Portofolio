@@ -6,8 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - Kevin Kwok</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tab-btn.active {
+      background-color: #4f46e5; /* Tailwind indigo-600 */
+      color: #fff;
+    }
+    .tab-btn:not(.active) {
+      background-color: #e5e7eb; /* Tailwind gray-200 */
+      color: #1f2937; /* Tailwind gray-800 */
+    }
+    .active-link {
+      color: #4f46e5 !important; /* Tailwind indigo-600 */
+      font-weight: 600;
+      border-bottom: 2px solid #4f46e5;
+      transition: color 0.2s, border-bottom 0.2s;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased">
+<body class="bg-gray-50 text-gray-900 antialiased scroll-smooth">
+
   <!-- Header -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/60 border-b border-gray-200">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -27,7 +44,7 @@
     <section id="hero" class="grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-          Hi, I'm <span class="text-indigo-600">Kevin Kwok</span> — Software Engineer & Designer
+          Hi, I'm <span class="text-indigo-600">Kevin Kwok</span> — Computer Science Major Software Engineer & Designer
         </h1>
         <p class="mt-4 text-gray-700 max-w-xl">
           Saya adalah mahasiswa Computer Science dengan fokus Software Engineering yang tertarik pada pengembangan aplikasi web dan solusi perangkat lunak. 
@@ -35,13 +52,13 @@
         </p>
         <div class="mt-6 flex gap-3">
           <a href="#contact" class="inline-block px-5 py-3 bg-indigo-600 text-white rounded-lg font-medium">Hire me</a>
-          <a href="resume.pdf" class="inline-block px-5 py-3 border border-gray-200 rounded-lg">Download CV</a>
+          <a href="./resume.pdf" class="inline-block px-5 py-3 border border-gray-200 rounded-lg">Download CV</a>
         </div>
       </div>
       <div class="order-first md:order-last flex flex-col items-center">
         <div class="rounded-full overflow-hidden shadow-2xl w-40 h-40">
           <!-- Profile Picture -->
-          <img src="Portofolio\pasfoto.jpeg" alt="Profile Picture" class="w-full h-full object-cover"/>
+          <img src="./pasfoto.jpg" alt="Profile Picture" class="w-full h-full object-cover"/>
         </div>
         <p class="mt-4 text-sm text-gray-600">Kevin Kwok</p>
       </div>
@@ -62,17 +79,6 @@
                 Saat ini sedang mencari kesempatan magang di bidang software engineering untuk mengasah keterampilan teknis, berkontribusi pada proyek nyata, dan belajar dari lingkungan kerja profesional.
           </p>
         </div>
-        <aside class="bg-white rounded-xl p-6 shadow-sm">
-          <h3 class="font-semibold">Contact</h3>
-          <p class="mt-2 text-sm text-gray-600">kevin.kwok06@outlook.com</p>
-          <p class="text-sm text-gray-600">+62 811-633-0661</p><br>
-          <h3 class="font-semibold">linkedin</h3>
-          <p class="mt-2 text-sm text-gray-600">linkedin.com/in/kevin-kwok-62781627a/</p>
-          <div class="mt-4">
-            <h4 class="text-sm font-medium">Location</h4>
-            <p class="text-sm text-gray-600">Jakarta, Indonesia</p>
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -81,32 +87,40 @@
       <h2 class="text-2xl font-semibold">Selected projects</h2>
       <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <article class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=60" class="w-full h-40 object-cover" />
+          <img src="./floracareproject.png" class="w-full h-40 object-cover" />
           <div class="p-4">
-            <h3 class="font-semibold">Job Application Portal</h3>
-            <p class="mt-2 text-sm text-gray-600">A full-stack job application portal with CV upload and candidate tracking.</p>
-            <a href="https://www.canva.com/" target="_blank" class="mt-3 inline-block text-indigo-600 text-sm">View on Canva →</a>
+            <h3 class="font-semibold">Flora Care AI Project</h3>
+            <p class="mt-2 text-sm text-gray-600">FloraCare AI is an intelligent system that detects plant diseases using artificial intelligence to support healthier and sustainable crops.</p>
+            <a href="https://www.canva.com/design/DAGUOG2UGAA/14otY5UV3h2PEL-bTN9eXQ/edit" target="_blank" class="mt-3 inline-block text-indigo-600 text-sm">View on Canva →</a>
           </div>
         </article>
         <article class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=60" class="w-full h-40 object-cover" />
+          <img src="./codereengineeringproject.png" class="w-full h-40 object-cover" />
           <div class="p-4">
-            <h3 class="font-semibold">Personal Portfolio</h3>
-            <p class="mt-2 text-sm text-gray-600">Responsive portfolio with contact form and resume download.</p>
-            <a href="https://www.canva.com/" target="_blank" class="mt-3 inline-block text-indigo-600 text-sm">View on Canva →</a>
+            <h3 class="font-semibold">Code Reengineering Project</h3>
+            <p class="mt-2 text-sm text-gray-600">Enhancing legacy code by applying software reengineering principles for better performance and maintainability.</p>
+            <a href="https://www.canva.com/design/DAGpXoVoHwg/OMuGjye8tXl1Uc2MB1RLPQ/edit" target="_blank" class="mt-3 inline-block text-indigo-600 text-sm">View on Canva →</a>
           </div>
         </article>
         <article class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1526378721413-3a1f8f7a4c28?auto=format&fit=crop&w=1400&q=60" class="w-full h-40 object-cover" />
+          <img src="./agileproject.png" class="w-full h-40 object-cover" />
           <div class="p-4">
-            <h3 class="font-semibold">Mini CMS for Recruiters</h3>
-            <p class="mt-2 text-sm text-gray-600">Lightweight CMS for job postings and applicant notes.</p>
-            <a href="https://www.canva.com/" target="_blank" class="mt-3 inline-block text-indigo-600 text-sm">View on Canva →</a>
+            <h3 class="font-semibold">Agile Course Project</h3>
+            <p class="mt-2 text-sm text-gray-600">Vehicle Hub is an Agile-driven web platform designed to simplify vehicle buying and selling with a user-friendly interface and secure transactions.</p>
+            <a href="https://www.canva.com/design/DAGpH_AWMUE/tZBLQnMK4eT7OJWYceAkcw/edit" target="_blank" class="mt-3 inline-block text-indigo-600 text-sm">View on Canva →</a>
+          </div>
+        </article>
+         <article class="bg-white rounded-xl overflow-hidden shadow-sm">
+          <img src="./HumanAndInteractionProject.png" class="w-full h-40 object-cover" />
+          <div class="p-4">
+            <h3 class="font-semibold">Human And Interaction Project</h3>
+            <p class="mt-2 text-sm text-gray-600">Diamond Cars Showroom is a web-based platform for browsing and exploring premium vehicles. Designed with Human-Computer Interaction (HCI) principles, it provides a clean, user-friendly interface that makes viewing car details simple and engaging.</p>
+            <a href="https://diamond-cut-motors-kevinkwok.vercel.app/" target="_blank" class="mt-3 inline-block text-indigo-600 text-sm">View on Website →</a>
           </div>
         </article>
       </div>
     </section>
-
+    
 <!-- Skills Section -->
 <section id="skills" class="mt-16">
   <h2 class="text-2xl font-semibold text-center">Skills & Tools</h2>
@@ -155,10 +169,6 @@
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" class="w-10 h-10" alt=".NET"/>
       <span class="mt-2 text-sm">.NET</span>
     </div>
-    <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-10 h-10" alt="NodeJS"/>
-      <span class="mt-2 text-sm">NodeJS</span>
-    </div>
   </div>
 
   <!-- Tools Grid -->
@@ -166,6 +176,10 @@
       <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">      
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" class="w-10 h-10" alt="Netlify"/>
       <span class="mt-2 text-sm">Netlify</span>
+    </div>
+      <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">      
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"class="w-10 h-10" alt="Vercel"/>
+      <span class="mt-2 text-sm">Vercel</span>
     </div>
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
         <img src="c:\Users\HP OMEN\Downloads\github-icon-2.svg" alt="GitHub Pages" class="w-10 h-10" />
@@ -176,8 +190,8 @@
       <span class="mt-2 text-sm">VSCode</span>
     </div>
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-10 h-10" alt="Git"/>
-      <span class="mt-2 text-sm">Git</span>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" class="w-10 h-10" alt="Visual Studio 2022"/>
+      <span class="mt-2 text-sm">Visual Studio 2022</span>
     </div>
     <div class="bg-gray-900 text-white rounded-xl p-4 flex flex-col items-center shadow hover:scale-105 transition">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="w-10 h-10" alt="Figma"/>
@@ -185,6 +199,86 @@
     </div>
   </div>
 </section>
+
+<!-- Contact -->
+  <section id="contact" class="bg-white rounded-xl p-6 shadow-sm mt-20">
+  <h2 class="text-2xl font-semibold mb-6 text-center">Contact Me</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+    <!-- Email -->
+    <div class="flex flex-col items-center bg-gray-50 rounded-lg p-5 shadow hover:shadow-md hover:scale-110 transition min-h-[180px]">
+      <span class="text-indigo-600 text-2xl mb-2">
+        <!-- Mail Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m0 0a4 4 0 018 0m-8 0v4a4 4 0 018 0v-4m-8 0l4-4 4 4" />
+        </svg>
+      </span>
+      <span class="font-medium">Email</span>
+      <a href="mailto:kevin.kwok06@outlook.com" class="mt-1 text-sm text-gray-600 hover:text-indigo-600 break-all">
+        kevin.kwok06@outlook.com
+      </a>
+      <p class="mt-4 text-xs text-gray-500 text-center">Feel free to email me for any collaboration, job opportunity, or just to say hi! I usually respond within 24 hours.</p>
+    </div>
+
+    <!-- Phone -->
+    <div class="flex flex-col items-center bg-gray-50 rounded-lg p-5 shadow hover:shadow-md hover:scale-110 transition min-h-[180px]">
+      <span class="text-indigo-600 text-2xl mb-2">
+        <!-- Phone Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l3 7-2 2a16 16 0 006 6l2-2 7 3v2a2 2 0 01-2 2h-1c-9.941 0-18-8.059-18-18V5a2 2 0 012-2z"/>
+        </svg>
+      </span>
+      <span class="font-medium">Phone</span>
+      <a href="tel:+628116330661" class="mt-1 text-sm text-gray-600 hover:text-indigo-600">
+        +62 811-633-0661
+      </a>
+      <p class="mt-4 text-xs text-gray-500 text-center">Available on WhatsApp and Telegram. Call or text me for urgent matters or quick questions.</p>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="flex flex-col items-center bg-gray-50 rounded-lg p-5 shadow hover:shadow-md hover:scale-110 transition min-h-[180px]">
+      <span class="text-indigo-600 text-2xl mb-2">
+        <!-- LinkedIn Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4.98 3.5A2.5 2.5 0 107.48 6a2.5 2.5 0 00-2.5-2.5zM3 8.5h4v12H3v-12zm7.5 0h3.6v1.7h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.1 2.3 4.1 5.3v6.8h-4v-6c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1v6.1h-4v-12z"/>
+        </svg>
+      </span>
+      <span class="font-medium">LinkedIn</span>
+      <a href="https://linkedin.com/in/kevin-kwok-62781627a/" target="_blank" class="mt-1 text-sm text-gray-600 hover:text-indigo-600 break-all">
+        linkedin.com/in/kevin-kwok-62781627a/
+      </a>
+      <p class="mt-4 text-xs text-gray-500 text-center">Connect with me for professional networking, recommendations, or to view my career journey and endorsements.</p>
+    </div>
+
+    <!-- GitHub -->
+    <div class="flex flex-col items-center bg-gray-50 rounded-lg p-5 shadow hover:shadow-md hover:scale-110 transition min-h-[180px]">
+      <span class="text-indigo-600 text-2xl mb-2">
+        <!-- GitHub Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M12 .5C5.4.5 0 5.9 0 12.5c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.2.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.1-1.2-1.4-1.2-1.4-1-.7.1-.7.1-.7 1.1.1 1.6 1.2 1.6 1.2 1 .1 1.7-.8 1.9-1.2.1-.7.4-1.1.6-1.4-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 011.2-3.2c-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1a4.7 4.7 0 011.2 3.2c0 4.7-2.9 5.7-5.6 6 .4.4.7 1 .7 2v3c0 .4.2.7.8.6A12 12 0 0024 12.5C24 5.9 18.6.5 12 .5z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+      <span class="font-medium">GitHub</span>
+      <a href="https://github.com/Kevin1303" target="_blank" class="mt-1 text-sm text-gray-600 hover:text-indigo-600 break-all">
+        github.com/Kevin1303
+      </a>
+      <p class="mt-4 text-xs text-gray-500 text-center">Explore my open-source projects, code samples, and contributions to the developer community.</p>
+    </div>
+
+    <!-- Location -->
+    <div class="flex flex-col items-center bg-gray-50 rounded-lg p-5 shadow hover:shadow-md hover:scale-110 transition min-h-[180px]">
+      <span class="text-indigo-600 text-2xl mb-2">
+        <!-- Location Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm0 0c-4.4 0-8 2.2-8 5v3h16v-3c0-2.8-3.6-5-8-5z" />
+        </svg>
+      </span>
+      <span class="font-medium">Location</span>
+      <span class="mt-1 text-sm text-gray-600">Tangerang, Indonesia</span>
+      <p class="mt-4 text-xs text-gray-500 text-center">Based in Tangerang, open to remote and on-site opportunities. Willing to relocate for the right position or project.</p>
+    </div>
+  </div>
+</section>
+
 
 <!-- Tab Script -->
 <script>
@@ -200,36 +294,58 @@
       document.getElementById(btn.dataset.tab).classList.remove("hidden");
     });
   });
-</script>
 
-    
-    <!-- Contact -->
-    <section id="contact" class="mt-16">
-      <h2 class="text-2xl font-semibold">Contact me</h2>
-      <form class="bg-white rounded-xl p-6 shadow-sm mt-6">
-        <label class="block">
-          <span class="text-sm font-medium">Name</span>
-          <input class="mt-2 block w-full rounded-md border-gray-200 shadow-sm p-2" placeholder="Your full name" />
-        </label>
-        <label class="block mt-4">
-          <span class="text-sm font-medium">Email</span>
-          <input type="email" class="mt-2 block w-full rounded-md border-gray-200 shadow-sm p-2" placeholder="you@example.com" />
-        </label>
-        <label class="block mt-4">
-          <span class="text-sm font-medium">Message</span>
-          <textarea rows="4" class="mt-2 block w-full rounded-md border-gray-200 shadow-sm p-2" placeholder="Tell me about your project or role"></textarea>
-        </label>
-        <div class="mt-4">
-          <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded-md">Send message</button>
-        </div>
-      </form>
-    </section>
+  // Smooth scroll with offset for sticky header
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href.length > 1 && document.querySelector(href)) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 8; // 8px extra gap
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // Highlight nav link for section in view
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const sectionIds = Array.from(navLinks).map(link => link.getAttribute('href')).filter(href => href.length > 1);
+  const sections = sectionIds.map(id => document.querySelector(id)).filter(Boolean);
+  function highlightNav() {
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
+    let current = null;
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
+      const rect = section.getBoundingClientRect();
+      if (rect.top - headerHeight <= 16 && rect.bottom - headerHeight > 16) {
+        current = sectionIds[i];
+        break;
+      }
+    }
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === current) {
+        link.classList.add('active-link');
+      } else {
+        link.classList.remove('active-link');
+      }
+    });
+  }
+  window.addEventListener('scroll', highlightNav);
+  window.addEventListener('resize', highlightNav);
+  document.addEventListener('DOMContentLoaded', highlightNav);
+</script>
 
     <!-- Footer -->
     <footer class="mt-16 py-8 text-center text-sm text-gray-600">
-      © 2025 Kevin Kwok — Built with ❤️ HTML 
+      © 2025 Kevin Kwok — Built with ❤️ HTML & Tailwind
     </footer>
   </main>
 </body>
 </html>
-
